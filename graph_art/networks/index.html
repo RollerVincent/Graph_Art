@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="A Basic HTML5 Template">
+  <meta property="og:type" content="website">
+
+</head>
+
+<body style="margin:0px;">
+    <div style=" font-size:12px; overflow: scroll; line-height:30px; font-family:Arial, Helvetica, sans-serif; height:30px; background-color: #aaaaaa; position:fixed; margin-bottom: 30px; width:100vw;">
+        <span style="padding-left:20px;">
+            <label for="i_nodes">Nodes</label>
+            <input type="text" id="i_nodes" name="i_nodes" style="width:40px; height:20px;" value="10000">
+        </span>
+        <span style="padding-left:20px;">
+            <label for="i_wid">Result Width</label>
+            <input type="text" id="i_wid" name="i_wid" style="width:40px; height:20px;" value="2000">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_dist">Max Distance</label>
+            <input type="text" id="i_dist" name="i_dist" style="width:30px; height:20px;" value="0.05">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_deg">Max Degree</label>
+            <input type="text" id="i_deg" name="i_deg" style="width:30px; height:20px;" value="100">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_clus">Cluster Cutoff</label>
+            <input type="text" id="i_clus" name="i_clus" style="width:30px; height:20px;" value="100">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_backc">Background Cutoff</label>
+            <input type="text" id="i_backc" name="i_backc" style="width:30px; height:20px;" value="100">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_nrad">Node Radius</label>
+            <input type="text" id="i_nrad" name="i_nrad" style="width:20px; height:20px;" value="1">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_lwid">Link Width</label>
+            <input type="text" id="i_lwid" name="i_lwid" style="width:20px; height:20px;" value="1">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_lop">Link Opacity</label>
+            <input type="text" id="i_lop" name="i_lop" style="width:20px; height:20px;" value="0.1">
+        </span>
+        <span style="padding-left:10px;">
+            <label for="i_backcol">Background</label>
+            <input type="color" id="i_backcol" name="i_backcol" value="#000000" style="height:20px;">
+        </span>
+        <span id = "update_button" style = "margin-left:10px; color:#000000; border:1px solid #000000; padding-left:5px; padding-right:5px;">UPDATE</span>
+        <a href="#" id="downloader" download="image.png"><span style = "margin-left:10px; color:#000000; border:1px solid #000000; padding-left:5px; padding-right:5px;">DOWNLOAD</span></a>
+    </div>
+    <canvas id="canvas" width="0" height="0" style="border:1px solid #000000;"></canvas>
+    <script src="image_data.js"></script>
+    <script src="graph.js"></script>
+    <script>
+
+        init_download_button();
+        init_update_button();
+
+
+        
+
+        redraw();
+    </script>
+</body>
+</html>
